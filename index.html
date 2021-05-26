@@ -1,0 +1,193 @@
+<!DOCTYPE html><html><head>
+  <script src="p5.min.js"></script>
+  <script src="p5.dom.min.js"></script>
+  <script src="p5.sound.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+
+</head>
+
+<body>
+  <div id="telaUm">
+    <button id="play">Iniciar Jogo</button>
+    <button id="abt">Sobre</button>
+  </div>
+  <div id="telaDois">
+    <p>Abril de 2020. Pandemia do novo Coronavírus. São Paulo.
+      Você é um trabalhador dos serviços essenciais e
+      não pode viver o isolamento social da maneira ideal. Portanto,
+      cabe à você tomar as medidas necessárias no seu dia-a-dia para evitar o contágio.
+      Durante esse percurso, sua missão consiste em passar por campos cheios de vírus,
+      entre outros obstáculos pandêmicos. Você está pronto? Boa sorte!</p>
+    <button id="comecar">Começar</button>
+  </div>
+  <div id="telaTres">
+      <p>Vírus Minado" é um jogo desenvolvido por alunos de Comunicação Social - Midialogia na Universidade Estadual de Campinas (UNICAMP),
+        sob orientação do Professor César Baio, para a disciplina
+        de projeto final em Narrativas Digitais, durante o ano de 2020.
+        Trata-se de um jogo educativo que visa conscientizar
+        o jogador acerca da importância da prevenção e dos cuidados
+        com a nova pandemia do Coronavírus. Através da lógica de um
+        jogo de bombas, buscamos traçar uma analogia entre a
+        lógica do contágio e o gameplay típico dessa modalidade de jogo virtual.</p>
+      <button id="backTelaUm">Voltar</button>
+  </div>
+
+    <div id="phaseOneWin">
+      <li>VOCÊ GANHOU!</li>
+      <p>Parabéns! Você conseguiu evitar o contágio!</p>
+      <p>Escolha uma recompensa para te ajudar na segunda fase:</p>
+      <button id="alcoolP1">Alcool em Gel</button>
+      <button id="mascaraP1">Mascara</button>
+      <button id="remedioP1">Remédio</button>
+    </div>
+
+    <div id="phaseOneLost">
+      <li>Foi contaminado :(</li>
+      <p>Infelizmente você não conseguiu evitar o contágio pelo coronavírus.</p>
+      <p>Mas podemos te ajudar a diminuir os riscos na próxima vez!</p>
+      <a href="https://coronavirus.saude.gov.br/sobre-a-doenca#como-se-proteger" target="_blank">Clique aqui para saber como se proteger</a>
+      <button id="tryAgainP1">Tentar novamente</button>
+    </div>
+
+    <div id="phaseTwoWin">
+      <li>VOCÊ GANHOU!</li>
+      <p>Parabéns! Você não foi contaminado! Prossiga para a próxima fase!</p>
+      <p>Tome bastante cuidado, pois o seu item especial não vale para as próximas fases.</p>
+      <a href="http://cfq.org.br/noticia/nota-oficial-esclarecimentos-sobre-alcool-gel-caseiro-higienizacao-de-eletronicos-e-outros/" target="_blank">Acesse aqui para entender como o álcool em gel te protegeu e para saber mais sobre o seu uso correto.</a>
+      <p><button id="contP2">Continuar</button></p>
+    </div>
+
+    <div id = "avisoAlcool">
+      <p>O álcool em gel impediu uma possível contaminação, graças à sua concentração de 70% e a reaplicação sempre que necessária.</p>
+      <p>Mas agora ele acabou, então tome cuidado!</p>
+      <button id="closeBar">Voltar ao jogo</button>
+    </div>
+
+    <div id="phaseTwoLost">
+      <li>Você foi contaminado :(</li>
+      <p>Infelizmente, o álcool em gel não foi suficiente para evitar o contágio. Lembre-se que o álcool deve ter uma concentração de 70% e deve ser reaplicado sempre que necessário, ao entrar e sair em estabelecimentos comerciais por exemplo. Mesmo com a utilização correta, lembre-se que os métodos de prevenção não são 100% eficazes pa impedir o contágio, portanto sermpre combine diferentes cuidados e evite sair de casa caso não seja muito necessário.  </p>
+      <a href="http://cfq.org.br/noticia/nota-oficial-esclarecimentos-sobre-alcool-gel-caseiro-higienizacao-de-eletronicos-e-outros/" target="_blank">Acesse aqui para saber mais sobre o uso correto do álcool em gel</a>
+      <button id="tryAgainP2">Voltar para a 1ª fase</button>
+    </div>
+
+    <div id="phaseTwoLostOption2">
+      <li>Você foi contaminado :(</li>
+      <p>Infelizmente você acabou sendo contaminado. </p>
+      <a href="http://cfq.org.br/noticia/nota-oficial-esclarecimentos-sobre-alcool-gel-caseiro-higienizacao-de-eletronicos-e-outros/" target="_blank">Acesse aqui para entender como o álcool em gel te protegeu da primeira vez e saiba mais o seu uso correto</a>
+      <button id="tryAgainP2option2">Voltar para a 1ª fase</button>
+    </div>
+
+    <div id="phaseThreeWin">
+      <li>VOCÊ GANHOU!</li>
+      <p>Parabéns! Você não foi contaminado. Prossiga para a próxima fase!</p>
+      <p>Tome bastante cuidado, pois o seu item especial não vale para as próximas fases.</p>
+      <a href="https://www.bbc.com/portuguese/geral-57152019" target="_blank">Acesse aqui para entender como a máscara te protegeu e para saber mais sobre o seu uso correto.</a>
+      <button id="contP3">Continuar</button>
+    </div>
+
+    <div id = "avisoMascara">
+      <p>O uso da máscara impediu uma possível contaminação, graças ao seu uso correto, cobrindo seu rosto desde a região do queixo até o nariz.</p>
+      <p>Mas agora ela acabou, então tome cuidado!</p>
+      <button id="closeBarMascara">Voltar ao jogo</button>
+    </div>
+
+    <div id="phaseThreeLost">
+      <li>Foi contaminado :(</li>
+      <p>Infelizmente, a máscara não te protegeu e você acabou sendo contaminado. Lembre-se que a máscara deve ser trocada a cada 2 horas de uso e deve ser utilizada corretamente, cobrindo da região do queixo até o nariz. Mesmo com a utilização correta, lembre-se que os métodos de prevenção não são 100% eficazes pa impedir o contágio, portanto sermpre combine diferentes cuidados e evite sair de casa caso não seja muito necessário.</p>
+      <a href="https://www.bbc.com/portuguese/geral-57152019" target="_blank">Acesse aqui para saber mais sobre o uso correto da máscara</a>
+      <p><button id="tryAgainP3">Voltar para a 1ª fase</button></p>
+    </div>
+
+    <div id="phaseThreeLostOption2">
+      <li>Foi contaminado :(</li>
+      <p>Infelizmente você acabou sendo contaminado</p>
+      <a href="https://www.bbc.com/portuguese/geral-57152019" target="_blank">Acesse aqui para entender como a máscara te protegeu da primeira vez e saiba mais sobre seu uso correto</a>
+      <p><button id="tryAgainP3option2">Voltar para a 1ª fase</button></p>
+    </div>
+
+    <div id="phaseFourWin">
+      <li>VOCÊ GANHOU!</li>
+      <p>Parabéns! Você não foi contaminado!</p>
+      <p> Mas atenção! Até o momento (Maio/2021), de acordo com a OMS, não há nenhum remédio comprovadamente eficaz para a prevenção do Covid-19. Portanto, nesse momento, o melhor remédio é manter-se informado e seguir as medidas de prevenção oficiais!</p>
+      <a href="https://www.aosfatos.org/noticias/o-que-e-fato-ou-ficcao-sobre-prevencao-e-tratamentos-para-covid-19/" target="_blank">Acesse aqui para saber o que é fato ou ficção sobre prevenção e tratamentos para a Covid-19</a>
+      <button id="contP4">Continuar</button>
+    </div>
+
+    <div id="phaseFourLost">
+      <li>Foi contaminado :(</li>
+      <p>Infelizmente, o remédio não mostrou-se efetivo para evitar o contágio. Até o momento (Maio/2021), de acordo com a OMS, não há nenhum remédio comprovadamente eficaz para a prevenção do Covid-19. </p>
+      <button id="tryAgainP4">Voltar para a 1ª fase</button>
+      <a href="https://www.aosfatos.org/noticias/o-que-e-fato-ou-ficcao-sobre-prevencao-e-tratamentos-para-covid-19/" target="_blank">Acesse aqui para saber o que é fato ou ficção sobre prevenção e tratamentos para a Covid-19</a>
+    </div>
+
+    <div id="phaseFiveWin">
+      <li>VOCÊ GANHOU!</li>
+      <p>Parabéns! Não foi contaminado!</p>
+      <p>Continue se protegendo e fique atento às taxas de ocupação das UTIs de sua cidade</p>
+      <button id="contP5">Continuar</button>
+      <a href="https://gauchazh.clicrbs.com.br/saude/noticia/2021/03/o-que-significa-ter-mais-de-100-de-lotacao-de-utis-cklznmsz000300198dt09cp59.html" target="_blank">Acesse para saber mais</a>
+    </div>
+
+    <div id="phaseFiveInicio">
+      <li>AVISO!</li>
+      <p>As UTIs da sua cidade alcançarão a superlotação dentro de 1 minuto.</p>
+      <p>Caso você se contamine e precise de atendimento hospitalar dentro desse periodo</p>
+      <p>Nós te daremos uma segunda chance para completar a fase</p>
+      <button id="entendi">Continuar</button>
+    </div>
+
+    <div id = "avisoUTI">
+      <p>Você foi contamidado, mas por sorte conseguiu uma vaga na UTI, portanto ganhará uma segunda chance!</p>
+      <p>Mas agora muito cuidado, não há mais leitos disponíveis!</p>
+      <button id="closeBarUTI">Voltar ao jogo</button>
+    </div>
+
+    <p id="timer"></p>
+
+    <div id = "avisoUTILotada">
+      <p>As UTI's estão lotadas :´( </p>
+      <button id="closeBarUTILotada">Voltar ao jogo</button>
+    </div>
+
+    <div id="phaseFiveLost">
+      <li>Foi contaminado :(</li>
+      <p>Infelizmente você não conseguiu se prevenir contra a COVID-19.</p>
+      <p>Infelizmente os leitos de UTI da sua cidade estão com lotação máxima, por isso você precisará recomeçar o jogo.</p>
+      <button id="tryAgainP5">Voltar para a 1ª fase</button>
+      <a href="https://gauchazh.clicrbs.com.br/saude/noticia/2021/03/o-que-significa-ter-mais-de-100-de-lotacao-de-utis-cklznmsz000300198dt09cp59.html" target="_blank">Acesse para saber mais</a>
+    </div>
+
+    <div id="phaseSixWin">
+      <li>VOCÊ GANHOU!</li>
+      <p>Parabéns! Não foi contaminado</p>
+      <button id="contP6">Continuar</button>
+    </div>
+
+    <div id="fakeNews1">
+      <a href="https://www.youtube.com/watch?v=aQWKlUayXA4" target="_blank"><img src="fakenews1.gif"></a>
+    </div>
+
+    <div id="fakeNews2">
+      <a href="https://www.youtube.com/watch?v=dHhwXqc03U8" target="_blank"><img src="fakenews2.gif"></a>
+    </div>
+
+    <div id="phaseSixLost">
+      <li>Você foi contaminado :(</li>
+      <p>Trata-se de um caso subnotificado! E por isso os números não apontaram a presença de vírus naquela região, pedimos desculpas. Com o aumento súbito na proliferação do vírus, estamos enfrentando problemas para contabilizar os casos. Vamos nos esforçar para que isso não aconteça novamente.   </p>
+      <button id="tryAgainP6">Tentar novamente</button>
+      <a href="https://www.youtube.com/watch?v=XSzo4S7Wmd4" target="_blank">Acesse para saber mais</a>
+    </div>
+
+    <div id="phaseSixLostFinal">
+      <li>Você foi contaminado :(</li>
+      <p>Infelizmente você não conseguiu evitar o contágio pelo coronavírus.</p>
+      <p>Bem na última fase, parceiro...</p>
+      <button id="tryAgainP6Final">Tentar novamente</button>
+    </div>
+    
+    <script src="cell.js"></script>
+    <script src="initializer.js"></script>
+
+    </body>
+  </html>

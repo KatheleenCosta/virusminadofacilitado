@@ -1,0 +1,1289 @@
+@font-face {
+  font-family: "Glober";
+  src: url("GloberThinFree.otf")
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+  background-image: url("fundo-estampa.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+canvas {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#telaUm {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  position: absolute;
+  z-index: 10;
+}
+
+#telaUm #play, #abt {
+  margin-top: 48px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #FFF;
+  color: #FFF;
+  padding: 8px 80px;
+  transition: all .5s linear;
+}
+
+#telaUm #play:hover, #abt:hover {
+  background: #FFF;
+  color: #333;
+}
+
+#telaDois {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  position: absolute;
+  z-index: 10;
+}
+
+#telaDois > p {
+  font-family: "Glober";
+  font-size: 30px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: justify;
+  align-self: flex-start;
+
+}
+
+#telaDois #comecar {
+  margin-top: 48px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #FFF;
+  color: #FFF;
+  padding: 8px 80px;
+  transition: all .5s linear;
+}
+
+#telaDois #comecar:hover {
+  background: #FFF;
+  color: #333;
+}
+
+#telaTres {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  position: absolute;
+  z-index: 10;
+}
+
+#telaTres > p {
+  font-family: "Glober";
+  font-size: 30px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: justify;
+  align-self: flex-start;
+
+}
+
+#telaTres #backTelaUm {
+  margin-top: 48px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #FFF;
+  color: #FFF;
+  padding: 8px 80px;
+  transition: all .5s linear;
+}
+
+#telaTres #backTelaUm:hover {
+  background: #FFF;
+  color: #333;
+}
+#phaseOneWin {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  position: absolute;
+  z-index: 10;
+}
+
+#phaseOneWin {
+  background: #28256B;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+}
+
+#phaseOneWin > li {
+  font-family: "Glober";
+  list-style: none;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #FFF;
+
+}
+
+#phaseOneWin > p {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#phaseOneWin #alcoolP1, #mascaraP1, #remedioP1 {
+  margin-top: 48px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #FFF;
+  color: #FFF;
+  padding: 8px 80px;
+  transition: all .5s linear;
+}
+
+#phaseOneWin #alcoolP1:hover, #mascaraP1:hover, #remedioP1:hover {
+  background: #FFF;
+  color: #333;
+}
+
+#phaseOneLost {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  position: absolute;
+  z-index: 10;
+}
+
+#phaseOneLost {
+  background: #28256B;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+}
+
+#phaseOneLost > li {
+  font-family: "Glober";
+  list-style: none;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #FFF;
+
+}
+
+#phaseOneLost > p {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#phaseOneLost > a {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#phaseOneLost #tryAgainP1 {
+  margin-top: 48px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #FFF;
+  color: #FFF;
+  padding: 8px 80px;
+  transition: all .5s linear;
+  align-items: right;
+}
+
+#phaseOneLost #truAgainP1:hover {
+  background: #FFF;
+  color: #333;
+}
+
+#phaseTwoWin {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  position: absolute;
+  z-index: 10;
+}
+
+#phaseTwoWin {
+  background: #28256B;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+}
+
+#phaseTwoWin > li {
+  font-family: "Glober";
+  list-style: none;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #FFF;
+
+}
+
+#phaseTwoWin > p {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#phaseTwoWin > a {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#phaseTwoWin #contP2 {
+  margin-top: 48px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #FFF;
+  color: #FFF;
+  padding: 8px 80px;
+  transition: all .5s linear;
+}
+
+#phaseTwoWin #contP2:hover {
+  background: #FFF;
+  color: #333;
+}
+
+#avisoAlcool{
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%, -0%);
+  background: #28256B;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+  z-index: 10;
+}
+
+#avisoAlcool > p {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#avisoAlcool #closeBar {
+  margin-top: 48px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #FFF;
+  color: #FFF;
+  padding: 8px 80px;
+  transition: all .5s linear;
+}
+
+#avisoAlcool #closeBar:hover {
+  background: #FFF;
+  color: #333;
+}
+
+#phaseTwoLost {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  position: absolute;
+  z-index: 10;
+}
+
+#phaseTwoLost {
+  background: #28256B;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+}
+
+#phaseTwoLost > li {
+  font-family: "Glober";
+  list-style: none;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #FFF;
+
+}
+
+#phaseTwoLost > p {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#phaseTwoLost > a {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#phaseTwoLost #tryAgainP2 {
+  margin-top: 48px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #FFF;
+  color: #FFF;
+  padding: 8px 80px;
+  transition: all .5s linear;
+}
+
+#phaseTwoLost #truAgainP2:hover {
+  background: #FFF;
+  color: #333;
+}
+
+#phaseTwoLostOption2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  position: absolute;
+  z-index: 10;
+}
+
+#phaseTwoLostOption2 {
+  background: #28256B;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+}
+
+#phaseTwoLostOption2 > li {
+  font-family: "Glober";
+  list-style: none;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #FFF;
+
+}
+
+#phaseTwoLostOption2 > p {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#phaseTwoLostOption2 > a {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#phaseTwoLostOption2 #tryAgainP2option2 {
+  margin-top: 48px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #FFF;
+  color: #FFF;
+  padding: 8px 80px;
+  transition: all .5s linear;
+}
+
+#phaseTwoLostOption2 #truAgainP2option2:hover {
+  background: #FFF;
+  color: #333;
+}
+
+#phaseThreeWin {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  position: absolute;
+  z-index: 10;
+}
+
+#phaseThreeWin{
+  background: #28256B;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+}
+
+#phaseThreeWin > li {
+  font-family: "Glober";
+  list-style: none;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #FFF;
+}
+
+#phaseThreeWin > p {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#phaseThreeWin > a {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#phaseThreeWin #contP3 {
+  margin-top: 48px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #FFF;
+  color: #FFF;
+  padding: 8px 80px;
+  transition: all .5s linear;
+}
+
+#phaseThreeWin #contP3:hover {
+  background: #FFF;
+  color: #333;
+}
+
+#avisoMascara{
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%, -0%);
+  background: #28256B;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+  z-index: 10;
+}
+
+#avisoMascara > p {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#avisoMascara #closeBarMascara {
+  margin-top: 48px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #FFF;
+  color: #FFF;
+  padding: 8px 80px;
+  transition: all .5s linear;
+}
+
+#avisoMascara #closeBarMascara:hover {
+  background: #FFF;
+  color: #333;
+}
+
+#phaseThreeLost {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  position: absolute;
+  z-index: 10;
+}
+
+#phaseThreeLost {
+  background: #28256B;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+}
+
+#phaseThreeLost > li {
+  font-family: "Glober";
+  list-style: none;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #FFF;
+
+}
+
+#phaseThreeLost > p {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#phaseThreeLost > a {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#phaseThreeLost #tryAgainP3 {
+  margin-top: 48px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #FFF;
+  color: #FFF;
+  padding: 8px 80px;
+  transition: all .5s linear;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#phaseThreeLost #truAgainP3:hover {
+  background: #FFF;
+  color: #333;
+}
+
+#phaseThreeLostOption2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  position: absolute;
+  z-index: 10;
+}
+
+#phaseThreeLostOption2 {
+  background: #28256B;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+}
+
+#phaseThreeLostOption2 > li {
+  font-family: "Glober";
+  list-style: none;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #FFF;
+
+}
+
+#phaseThreeLostOption2 > p {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#phaseThreeLostOption2 > a {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#phaseThreeLostOption2 #tryAgainP3option2 {
+  margin-top: 48px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #FFF;
+  color: #FFF;
+  padding: 8px 80px;
+  transition: all .5s linear;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+#phaseThreeLost #truAgainP3option2:hover {
+  background: #FFF;
+  color: #333;
+}
+
+#phaseFourWin {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  position: absolute;
+  z-index: 10;
+}
+
+#phaseFourWin {
+  background: #28256B;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+}
+
+#phaseFourWin > li {
+  font-family: "Glober";
+  list-style: none;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #FFF;
+
+}
+
+#phaseFourWin > p {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#phaseFourWin > a {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#phaseFourWin #contP4 {
+  margin-top: 48px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #FFF;
+  color: #FFF;
+  padding: 8px 80px;
+  transition: all .5s linear;
+}
+
+#phaseFourWin #contP4:hover {
+  background: #FFF;
+  color: #333;
+}
+
+#phaseFourLost {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  position: absolute;
+  z-index: 10;
+}
+
+#phaseFourLost {
+  background: #28256B;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+}
+
+#phaseFourLost > li {
+  font-family: "Glober";
+  list-style: none;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #FFF;
+
+}
+
+#phaseFourLost > p {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#phaseFourLost > a {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+
+#phaseFourLost #tryAgainP4 {
+  margin-top: 48px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #FFF;
+  color: #FFF;
+  padding: 8px 80px;
+  transition: all .5s linear;
+}
+
+#phaseFourLost #truAgainP4:hover {
+  background: #FFF;
+  color: #333;
+}
+
+#phaseFiveWin {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  position: absolute;
+  z-index: 10;
+}
+
+#phaseFiveWin {
+  background: #28256B;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+}
+
+#phaseFiveWin > li {
+  font-family: "Glober";
+  list-style: none;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #FFF;
+
+}
+
+#phaseFiveWin > p {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#phaseFiveWin #contP5 {
+  margin-top: 48px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #FFF;
+  color: #FFF;
+  padding: 8px 80px;
+  transition: all .5s linear;
+}
+
+#phaseFiveWin #contP5:hover {
+  background: #FFF;
+  color: #333;
+}
+
+#phaseFiveInicio{
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%, -0%);
+  display: none;
+  position: absolute;
+  z-index: 10;
+
+}
+
+#phaseFiveInicio {
+  background: #28256B;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+}
+
+#phaseFiveInicio > li {
+  font-family: "Glober";
+  list-style: none;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #FFF;
+
+}
+
+#phaseFiveInicio > p {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#phaseFiveInicio #entendi {
+  margin-top: 48px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #FFF;
+  color: #FFF;
+  padding: 8px 80px;
+  transition: all .5s linear;
+}
+
+#phaseFiveInicio #entendi:hover {
+  background: #FFF;
+  color: #333;
+}
+
+#phaseFiveLost {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  position: absolute;
+  z-index: 10;
+}
+
+#phaseFiveLost {
+  background: #28256B;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+}
+
+#phaseFiveLost > li {
+  font-family: "Glober";
+  list-style: none;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #FFF;
+
+}
+
+#phaseFiveLost > p {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#phaseFiveLost > a {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+
+#phaseFiveLost #tryAgainP5 {
+  margin-top: 48px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #FFF;
+  color: #FFF;
+  padding: 8px 80px;
+  transition: all .5s linear;
+}
+
+#phaseFiveLost #truAgainP5:hover {
+  background: #FFF;
+  color: #333;
+}
+
+#avisoUTI{
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #28256B;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+  z-index: 10;
+}
+
+#avisoUTI > p {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#avisoUTI #closeBarUTI {
+  margin-top: 48px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #FFF;
+  color: #FFF;
+  padding: 8px 80px;
+  transition: all .5s linear;
+}
+
+#avisoUTI #closeBarUTI:hover {
+  background: #FFF;
+  color: #333;
+}
+
+
+#timer {
+  font-family: "Glober";
+  background: #28256B;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: bold;
+ 
+}
+
+#avisoUTILotada{
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%, -0%);
+  background: #28256B;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+  z-index: 10;
+}
+
+#avisoUTILotada > p {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#avisoUTILotada #closeBarUTILotada {
+  margin-top: 48px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #FFF;
+  color: #FFF;
+  padding: 8px 80px;
+  transition: all .5s linear;
+}
+
+#avisoUTILotada #closeBarUTILotada:hover {
+  background: #FFF;
+  color: #333;
+}
+
+#phaseSixWin {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  position: absolute;
+  z-index: 10;
+}
+
+#phaseSixWin {
+  background: #28256B;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+}
+
+#phaseSixWin > li {
+  font-family: "Glober";
+  list-style: none;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #FFF;
+
+}
+
+#phaseSixWin > p {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#phaseSixWin #contP6 {
+  margin-top: 48px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #FFF;
+  color: #FFF;
+  padding: 8px 80px;
+  transition: all .5s linear;
+}
+
+#phaseSixWin #contP6:hover {
+  background: #FFF;
+  color: #333;
+}
+
+#phaseSixLost {
+  position: absolute;
+  left: 50%;
+  bottom:0%;
+  transform: translate(-50%, -50%);
+  display: none;
+  position: absolute;
+  z-index: 10;
+}
+
+#phaseSixLost {
+  background: #28256B;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+}
+
+#phaseSixLost > li {
+  font-family: "Glober";
+  list-style: none;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #FFF;
+
+}
+
+#phaseSixLost > p {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#phaseSixLost > a {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#phaseSixLost #tryAgainP6 {
+  margin-top: 48px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #FFF;
+  color: #FFF;
+  padding: 8px 80px;
+  transition: all .5s linear;
+}
+
+#phaseSixLost #truAgainP6:hover {
+  background: #FFF;
+  color: #333;
+}
+
+#phaseSixLostFinal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  position: absolute;
+  z-index: 10;
+}
+
+#phaseSixLostFinal {
+  background: #28256B;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+}
+
+#phaseSixLostFinal > li {
+  font-family: "Glober";
+  list-style: none;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #FFF;
+
+}
+
+#phaseSixLostFinal > p {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#phaseSixLostFinal > a {
+  font-family: "Glober";
+  font-size: 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: left;
+  align-self: flex-start;
+}
+
+#phaseSixLostFinal #tryAgainP6Final {
+  margin-top: 48px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #FFF;
+  color: #FFF;
+  padding: 8px 80px;
+  transition: all .5s linear;
+}
+
+#phaseSixLostFinal #truAgainP6Final:hover {
+  background: #FFF;
+  color: #333;
+}
+
+#fakeNews1 {
+  display: none;
+  margin-left: auto;
+}
+
+#fakeNews2 {
+  display: none;
+  margin-right: auto;
+}
