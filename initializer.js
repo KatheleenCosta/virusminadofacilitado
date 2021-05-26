@@ -102,8 +102,10 @@ document.head.insertAdjacentElement('afterbegin', ninthScript);
   startSeventhPhase();
   } else if (phase ==8){
   startEighthPhase();
-  } else {
+  } else if (phase ==9){
   startNinthPhase();  
+  } else {
+    startFirstPhase();
   }
 
   //} else if (phase === 3) {
